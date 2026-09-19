@@ -105,7 +105,7 @@ img { max-width: 100%; }
 .brand-mark { display: flex; align-items: center; flex: none; }
 .brand-mark img { height: clamp(28px, 3.6vw, 36px); width: auto; display: block; }
 
-.nav-wide { display: flex; align-items: baseline; gap: clamp(16px, 2.4vw, 34px); }
+.nav-wide { display: flex; align-items: center; gap: clamp(16px, 2.4vw, 34px); }
 .nav-wide a {
   font-family: var(--serif);
   font-size: 18px;
@@ -130,6 +130,8 @@ img { max-width: 100%; }
   display: inline-block;
 }
 .btn-enquire:hover { background: var(--navy-2); color: var(--on-navy); }
+.nav-wide a.btn-enquire[aria-current="page"],
+.nav-panel a.btn-enquire[aria-current="page"] { color: var(--on-navy); border-bottom-color: transparent; }
 
 .nav-toggle {
   display: none;
