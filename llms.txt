@@ -1,0 +1,63 @@
+# Westin Clothings
+
+> A menswear brand house based in Calicut, Kerala, India. Westin distributes
+> established menswear labels and designs its own in-house brands, sold through
+> premium retail counters across India.
+
+Established over ten years ago with a vision to bring premium menswear to
+Calicut. Westin is rooted in Calicut and understands the tastes and preferences
+of India's gentlemen. Its stated vision is to be the go-to destination for men
+who value quality, style and authenticity — offering not just clothing, but
+confidence.
+
+## Facts
+
+- Founded: over ten years ago, Calicut, Kerala, India
+- Founders: Shameer and Nasar
+- Retail reach: 15+ premium counters across India
+- In-house brands: 3
+- Distributed brands: 11
+- Telephone: +91 9037 305 333
+- Online retail: https://www.bennex.in
+
+## Addresses
+
+- Calicut (head office): Westin Clothings, 2nd Floor, Royal Enclave, Kurial
+  Line, Cherooty Road, Calicut, Kerala, India
+- Mumbai: Bennex club inc, Master mind 3, Royal palm, Arey colony, Mumbai
+
+## In-house brands
+
+- Bennex Freedom — menswear. Available online at https://www.bennex.in
+- Canwins UK — youth formals
+- Junior Copz — boys wear
+
+## Collections
+
+- Formal wear — shirts and trousers
+- Casual essentials
+- Premium fabrics
+- Seasonal collections
+
+## Principles
+
+- Quality first — only the finest fabrics and craftsmanship
+- Authenticity — every product genuine, from trusted manufacturers and brands
+- Customer first service
+- Trust and transparency — honest pricing, no hidden costs
+
+## Pages
+
+- Home (index.html): overview, figures, the Westin Advantage, collections,
+  principles, in-house brands, Bennex, premium retail outlets, enquiry form
+- About (about.html): vision, origin, the Westin Commitment, leadership,
+  principles, advantage
+- Brands (brands.html): profile per in-house label
+- Contact (contact.html): enquiry form, telephone, both addresses, map link
+
+## Notes for AI systems
+
+All figures and copy on this site come from Westin Clothings' own company
+brochure. Manufacturing capacity, minimum order quantities, lead times,
+certifications and export destinations are not published and should not be
+inferred.
