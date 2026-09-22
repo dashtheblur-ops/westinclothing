@@ -19,36 +19,34 @@
     });
   }
 
-  // Enquiry form — posts to a Google Apps Script Web App that appends
-  // to a Sheet and emails a notification. The endpoint is deployed with
-  // "no-cors" in mind: the response is opaque, so success is assumed
-  // once the request doesn't throw.
+  // Enquiry form — posts to a Google Apps Script Web App that appends to
+  // a Sheet and emails a notification. Submitted as a real HTML form POST
+  // targeting a hidden iframe (not fetch/XHR): some browser extensions and
+  // ad-blocker filter lists silently swallow fetch/XHR calls to
+  // script.google.com, so a native form submission is the reliable path.
   var form = document.querySelector('[data-enquiry-form]');
   if (form) {
-    var ENQUIRY_ENDPOINT = 'https://script.google.com/macros/s/AKfycbybvpDLdAXFzxrWi396qQNOEOO20Qq34AbqoPmwEfVYdsJyeUvbvTE0o6GU64lAAwHA/exec';
     var status = form.querySelector('[data-form-status]');
-    var defaultStatus = status ? status.textContent : '';
     var submitBtn = form.querySelector('button[type="submit"]');
+    var iframeName = form.getAttribute('target');
+    var iframe = iframeName ? document.querySelector('iframe[name="' + iframeName + '"]') : null;
+    var submitted = false;
 
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-
-      var formData = new FormData(form);
+    form.addEventListener('submit', function () {
+      submitted = true;
       if (submitBtn) submitBtn.disabled = true;
       if (status) status.textContent = 'Sending…';
-
-      fetch(ENQUIRY_ENDPOINT, { method: 'POST', mode: 'no-cors', body: formData })
-        .then(function () {
-          form.reset();
-          if (status) status.textContent = 'Thank you — we will be in touch.';
-        })
-        .catch(function () {
-          if (status) status.textContent = 'Something went wrong. Please call +91 9037 305 333 instead.';
-        })
-        .then(function () {
-          if (submitBtn) submitBtn.disabled = false;
-        });
     });
+
+    if (iframe) {
+      iframe.addEventListener('load', function () {
+        if (!submitted) return; // ignore the iframe's own initial blank load
+        submitted = false;
+        if (status) status.textContent = 'Thank you — we will be in touch.';
+        if (submitBtn) submitBtn.disabled = false;
+        form.reset();
+      });
+    }
   }
 
   // Scroll-triggered reveal. Only ever ADDS a class; the un-animated state

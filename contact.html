@@ -109,7 +109,7 @@
     <div class="grid-2" style="grid-template-columns: repeat(auto-fit, minmax(min(100%, max(290px, 45%)), 1fr)); gap: clamp(32px,4.5vw,72px);">
       <div>
         <div class="eyebrow" style="margin-bottom: 26px;"><span class="sq"></span><span class="label">Enquiry form</span></div>
-        <form data-enquiry-form novalidate>
+        <form data-enquiry-form novalidate action="https://script.google.com/macros/s/AKfycbybvpDLdAXFzxrWi396qQNOEOO20Qq34AbqoPmwEfVYdsJyeUvbvTE0o6GU64lAAwHA/exec" method="POST" target="enquiry-hidden-frame">
           <div class="form-grid">
             <label class="field">
               <span>Full name</span>
@@ -162,6 +162,7 @@
             <div class="form-status" data-form-status>Or call +91 9037 305 333 directly.</div>
           </div>
         </form>
+        <iframe name="enquiry-hidden-frame" style="display: none;" aria-hidden="true" title="Enquiry submission target"></iframe>
       </div>
       <div>
         <div class="eyebrow" style="margin-bottom: 20px;"><span class="sq"></span><span class="label">Colophon</span></div>
