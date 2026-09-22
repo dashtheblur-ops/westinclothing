@@ -452,7 +452,7 @@ h2.on-navy, h1.on-navy { color: var(--on-navy); }
 .own-brand-cell { background: var(--paper); padding: 22px 16px 24px; text-align: center; }
 .own-brand-cell .logo { height: 58px; margin-bottom: 14px; display: flex; align-items: center; justify-content: center; }
 .own-brand-cell .logo img { max-height: 100%; max-width: 100%; width: auto; height: auto; object-fit: contain; display: block; }
-.own-brand-cell .name { font-family: var(--serif); font-size: clamp(19px, 2vw, 24px); letter-spacing: 0.04em; color: var(--navy); margin-bottom: 7px; }
+.own-brand-cell .name { font-family: var(--serif); font-size: clamp(30px, 3.4vw, 40px); letter-spacing: 0.02em; color: var(--navy); }
 .own-brand-cell .segment { font-size: 9px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--eyebrow); }
 
 /* ---------- Bennex e-commerce feature ---------- */
