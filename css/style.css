@@ -581,8 +581,6 @@ h2.on-navy, h1.on-navy { color: var(--on-navy); }
   color: var(--muted);
   max-width: 22ch;
 }
-.contact-photo { position: relative; aspect-ratio: 16 / 9; min-height: 190px; margin-top: 22px; background: rgba(22, 24, 46, 0.05); box-shadow: inset 0 0 0 1px var(--rule-soft); color: var(--navy); }
-
 /* ---------- Brand blocks (Brands page) ---------- */
 .brand-block {
   display: grid;
