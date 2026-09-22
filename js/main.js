@@ -19,14 +19,35 @@
     });
   }
 
-  // Enquiry form — client-side only for now; no backend wired up yet.
+  // Enquiry form — posts to a Google Apps Script Web App that appends
+  // to a Sheet and emails a notification. The endpoint is deployed with
+  // "no-cors" in mind: the response is opaque, so success is assumed
+  // once the request doesn't throw.
   var form = document.querySelector('[data-enquiry-form]');
   if (form) {
+    var ENQUIRY_ENDPOINT = 'https://script.google.com/macros/s/AKfycbybvpDLdAXFzxrWi396qQNOEOO20Qq34AbqoPmwEfVYdsJyeUvbvTE0o6GU64lAAwHA/exec';
     var status = form.querySelector('[data-form-status]');
     var defaultStatus = status ? status.textContent : '';
+    var submitBtn = form.querySelector('button[type="submit"]');
+
     form.addEventListener('submit', function (e) {
       e.preventDefault();
-      if (status) status.textContent = 'Thank you — we will be in touch.';
+
+      var formData = new FormData(form);
+      if (submitBtn) submitBtn.disabled = true;
+      if (status) status.textContent = 'Sending…';
+
+      fetch(ENQUIRY_ENDPOINT, { method: 'POST', mode: 'no-cors', body: formData })
+        .then(function () {
+          form.reset();
+          if (status) status.textContent = 'Thank you — we will be in touch.';
+        })
+        .catch(function () {
+          if (status) status.textContent = 'Something went wrong. Please call +91 9037 305 333 instead.';
+        })
+        .then(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 
