@@ -370,6 +370,7 @@ h2.on-navy, h1.on-navy { color: var(--on-navy); }
 
 .plate-figure {
   position: relative;
+  width: 100%;
   aspect-ratio: 4 / 5;
   min-height: 280px;
   box-shadow: inset 0 0 0 1px var(--on-navy-rule);
@@ -459,6 +460,7 @@ h2.on-navy, h1.on-navy { color: var(--on-navy); }
 /* ---------- Bennex e-commerce feature ---------- */
 .wide-figure {
   position: relative;
+  width: 100%;
   aspect-ratio: 16 / 9;
   min-height: 200px;
   box-shadow: inset 0 0 0 1px var(--on-navy-rule);
