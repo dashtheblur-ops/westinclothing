@@ -556,12 +556,6 @@ h2.on-navy, h1.on-navy { color: var(--on-navy); }
 .colophon .line { padding: 17px 0; border-top: 1px solid var(--rule); }
 .colophon .line .l { font-size: 9px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
 .colophon .line .v { font-family: var(--serif); font-size: clamp(19px, 2vw, 23px); line-height: 1.45; color: var(--navy); }
-.maps-card { display: block; margin-top: 22px; padding: 20px 22px; background: var(--navy); }
-.maps-card:hover { background: var(--navy-2); }
-.maps-card .l { font-size: 9px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
-.maps-card .v { font-family: var(--serif); font-size: 19px; color: var(--on-navy); }
-.maps-card:hover .v { color: var(--on-navy); }
-
 /* ---------- Founder portraits / photo placeholder ---------- */
 .portrait-figure {
   position: relative;
