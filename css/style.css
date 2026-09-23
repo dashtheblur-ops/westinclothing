@@ -446,14 +446,18 @@ h2.on-navy, h1.on-navy { color: var(--on-navy); }
 
 .own-brand-strip {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, max(130px, 30%)), 1fr));
+  grid-template-columns: 1fr;
   gap: 1px;
   background: var(--rule);
 }
+@media (min-width: 640px) {
+  .own-brand-strip { grid-template-columns: repeat(3, 1fr); }
+}
 .own-brand-cell { background: var(--paper); padding: 22px 16px 24px; text-align: center; }
 .own-brand-cell .logo { height: 58px; margin-bottom: 14px; display: flex; align-items: center; justify-content: center; }
+.own-brand-cell .logo.logo-text { height: auto; min-height: 58px; }
 .own-brand-cell .logo img { max-height: 100%; max-width: 100%; width: auto; height: auto; object-fit: contain; display: block; }
-.own-brand-cell .name { font-family: var(--serif); font-size: clamp(46px, 5.6vw, 66px); letter-spacing: 0.02em; color: var(--navy); }
+.own-brand-cell .name { font-family: var(--serif); font-size: clamp(46px, 5.6vw, 66px); line-height: 1.05; letter-spacing: 0.02em; color: var(--navy); margin-bottom: 10px; }
 .logo-canwins { max-height: 68% !important; }
 .own-brand-cell .segment { font-size: 9px; font-weight: 600; letter-spacing: 0.24em; text-transform: uppercase; color: var(--eyebrow); }
 
